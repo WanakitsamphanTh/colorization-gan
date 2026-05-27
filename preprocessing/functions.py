@@ -30,8 +30,8 @@ def autoCrop(img, size = 96):
     img = cv.resize(img, None, fx=rat, fy=rat, interpolation=cv.INTER_CUBIC)  
     nw, nh = img.shape[0], img.shape[1]
 
-    # Center cropping
-    img = img[int((nw-size)/2):int((nw+size)/2), int((nh-size)/2):int((nh+size)/2),:]
+    # Center croppingnh
+    img = img[int((nw-size)/2):int((nw+size)/2), int((nh-size)/2):int((+size)/2),:]
 
     return img
 
@@ -50,11 +50,11 @@ def enhanceBrightness(img, alpha, beta):
     return cv.convertScaleAbs(img, alpha=alpha, beta=beta) 
 
 def normalizeLAB(imgs):
-    imgs[...,0] = imgs[...,0] / 100
-    imgs[...,1:] = (imgs[...,1:] + 128) / 255
-    return imgs
+    norm = imgs.astype(np.float32)
+    norm = norm / 255
+    return norm
 
 def denormalizeLAB(imgs):
-    imgs[...,0] = imgs[...,0] * 100
-    imgs[...,1:] = imgs[...,1:] * 255 - 128
-    return imgs
+    denorm = imgs.copy()
+    denorm = denorm * 255
+    return denorm.astype("uint8")

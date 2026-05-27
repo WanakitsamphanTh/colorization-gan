@@ -1,7 +1,17 @@
-Source
--
-https://www.kaggle.com/datasets/dimensi0n/lhq-1024?resource=download ✅
+# Grayscale Image Colorization
 
-https://www.kaggle.com/datasets/ziya07/tourism-landmark-dataset
+This was a one of my independent ML projects in 2024. I revised the code to improve readability and performance. In the revised version, I trained the models on my own photographs taken between 2023 - 2025 in Japan France, Belgium, Netherlands, and Germany, as I went study abroad. 
 
-https://www.kaggle.com/datasets/umairatwork/manzoorumair-sea-image-dataset-musid
+## Contents
+- [Overview](#Overview)
+- [Data Preparation](#Data-Preparation)
+- [Model Architecture]()
+- [Model Parameters]()
+- [Training Loss and Colorization Results]()
+- [Test Results]()
+
+## Overview
+
+
+## Data Preparation
+1.
